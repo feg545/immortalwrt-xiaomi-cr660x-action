@@ -12,3 +12,9 @@
 
 # Modify default IP
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
+
+# xiao mi cr660x patch
+git apply ../cr660x.patch
+
+# merge config
+cp ../cr660x.config .config
