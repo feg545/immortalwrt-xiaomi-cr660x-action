@@ -98,6 +98,8 @@ jobs:
       run: |
         cd openwrt
         make defconfig
+        echo "=======看看实际修改了哪些配置======="
+        ./scripts/diffconfig.sh
         make download -j8
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
